@@ -1,0 +1,28 @@
+# vim: ft=sh
+name="libfm"
+iteration="1"
+version="1.1.2.2"
+desc="File management library"
+bdeps="gtk2 menu-cache shared-mime-info udisks desktop-file-utils"
+deps="$bdeps"
+arch="any"
+flags=""
+src="http://downloads.sourceforge.net/pcmanfm/$name-$version.tar.gz"
+
+
+function configure() {
+	./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--with-gnu-ld
+}
+
+function build() {
+	export LDFLAGS="${LDFLAGS} -lgobject-2.0 -lglib-2.0"
+	default
+}
+
+function installpkg() {
+	default
+	rm -rf $dest_dir/usr/include/libfm
+	mv $dest_dir/usr/include/libfm-1.0 ${dest_dir}/usr/include/libfm
+}

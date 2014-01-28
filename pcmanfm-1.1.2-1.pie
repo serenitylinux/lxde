@@ -1,0 +1,28 @@
+# vim: ft=sh
+name="pcmanfm"
+iteration="1"
+version="1.1.2"
+desc="A fast and lightweight file manager"
+bdeps="gtk2 desktop-file-utils libfm lxmenu-data"
+deps="intltool gtk2 libfm"
+arch="any"
+flags=""
+url="http://pcmanfm.sourceforge.net"
+src="http://downloads.sourceforge.net/$name/$name-$version.tar.gz" 
+
+
+function configure() {
+	./configure --sysconfdir=/etc --prefix=/usr
+}
+
+function build() {
+	export LDFLAGS="${LDFLAGS} -lm"
+	default
+}
+
+function installpkg() {
+	default
+}
+function post_install() {
+	update-desktop-database -q
+}
