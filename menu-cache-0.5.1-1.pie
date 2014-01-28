@@ -1,0 +1,26 @@
+# vim: ft=sh
+name="menu-cache"
+iteration="1"
+version="0.5.1"
+desc="LXDE menu cacheing"
+bdeps=""
+deps=""
+arch="any"
+flags=""
+
+
+function configure() {
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libexecdir=/usr/lib/menu-cache \
+		--disable-static
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

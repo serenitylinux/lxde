@@ -1,0 +1,22 @@
+# vim: ft=sh
+name="lxrandr"
+iteration="1"
+version="0.1.2"
+desc="Monitor configuration tool in LXDE"
+bdeps="gtk2 xorg-xrandr pkg-config initltool"
+deps="gtk2 xorg-xrandr"
+arch="any"
+flags=""
+
+
+function configure() {
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

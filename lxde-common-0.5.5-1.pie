@@ -1,0 +1,24 @@
+# vim: ft=sh
+name="lxde-common"
+iteration="1"
+version="0.5.5"
+desc="Common files of the LXDE Desktop"
+bdeps="gtk-engines lxde-icon-theme lxsession"
+deps="$bdeps"
+arch="any"
+flags=""
+
+
+function configure() {
+	./configure --sysconfdir=/etc --prefix=/usr
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+	install -Dm644 lxde-logout.desktop \
+		$dest_dir/usr/share/applications/lxde-logout.desktop
+}

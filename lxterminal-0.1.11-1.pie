@@ -1,0 +1,22 @@
+# vim: ft=sh
+name="lxterminal"
+iteration="1"
+version="0.1.11"
+desc="LXDE Terminal Emulator"
+bdeps="pkg-config intltool fontconfig libx11 glib2 vte gtk2"
+deps="fontconfig libx11 glib2 vte gtk2"
+arch="any"
+flags=""
+
+
+function configure() {
+	./configure --sysconfdir=/etc --prefix=/usr
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

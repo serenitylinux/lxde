@@ -1,0 +1,22 @@
+# vim: ft=sh
+name="lxtask"
+iteration="1"
+version="0.1.4"
+desc="Task manager for LXDE"
+bdeps="gtk2 pkg-config intltool"
+deps="gtk2"
+arch="any"
+flags=""
+
+
+function configure() {
+	./configure --sysconfdir=/etc --prefix=/usr
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}

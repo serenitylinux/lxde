@@ -1,0 +1,17 @@
+# vim: ft=sh
+
+function isset() {
+	[ -z "$(eval echo \$$1)" ]
+}
+
+function ine_v() {
+	if isset $1; then
+		eval $1="$2"
+	fi
+}
+
+ine_v ext "tar.gz"
+ine_v url "http://www.lxde.org/"
+#ine_v src "http://downloads.sourceforge.net/sourceforge/lxde/$name-$version.$ext"
+ine_v src "http://downloads.sourceforge.net/lxde/$name-$version.$ext"
+ine_v srcdir "$name-$version"

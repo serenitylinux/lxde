@@ -1,0 +1,22 @@
+# vim: ft=sh
+name="lxde-icon-theme"
+iteration="1"
+version="0.5.0"
+desc="LXDE default icon theme based on nuoveXT2"
+bdeps="gtk2"
+deps="gtk2"
+arch="any"
+flags=""
+ext="tar.bz2"
+
+function configure() {
+	default
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+}
