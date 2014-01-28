@@ -1,0 +1,33 @@
+# vim: ft=sh
+name="openbox"
+iteration="1"
+version="3.5.2"
+desc="Lightweight window manager"
+bdeps="libxml2 libxinerama libxrandr libxcursor pango librsvg"
+deps="$bdeps"
+arch="any"
+flags=""
+url="http://openbox.org/"
+src="http://www.icculus.org/openbox/releases/$name-$version.tar.gz"
+
+
+function configure() {
+	sed -i 's|/usr/bin/env python|/usr/bin/env python2|' \
+	data/autostart/openbox-xdg-autostart
+	./configure --prefix=/usr \
+		--with-x \
+		--libexecdir=/usr/lib/openbox \
+		--sysconfdir=/etc
+}
+
+function build() {
+	default
+}
+
+function installpkg() {
+	default
+	rm -r ${dest_dir}/usr/bin/{gdm-control,gnome-panel-control,openbox-gnome-session} \
+	      ${dest_dir}/usr/share/gnome{,-session} \
+	      ${dest_dir}/usr/share/xsessions/openbox-gnome.desktop
+	#TODO rm gnome man
+}
