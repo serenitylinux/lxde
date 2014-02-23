@@ -3,10 +3,10 @@ name="lxrandr"
 iteration="1"
 version="0.1.2"
 desc="Monitor configuration tool in LXDE"
-bdeps="gtk2 xorg-xrandr pkg-config intltool"
-deps="gtk2 xorg-xrandr"
-arch="any"
-flags=""
+bdeps=('gtk2' 'xorg-xrandr' 'pkg-config' 'intltool')
+deps=('gtk2' 'xorg-xrandr')
+arch=('any')
+flags=()
 
 
 function configure() {

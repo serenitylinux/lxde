@@ -3,10 +3,10 @@ name="lxnm"
 iteration="1"
 version="0.2.2"
 desc="A Network Manager (Part of LXDE)"
-bdeps="glib2"
-deps="glib2"
-arch="any"
-flags=""
+bdeps=('glib2')
+deps=('glib2')
+arch=('any')
+flags=()
 
 
 function configure() {

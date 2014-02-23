@@ -3,11 +3,11 @@ name="libfm"
 iteration="1"
 version="1.1.2.2"
 desc="File management library"
-bdeps="gtk2 menu-cache shared-mime-info udisks desktop-file-utils"
-deps="$bdeps"
-arch="any"
-flags=""
-src="http://downloads.sourceforge.net/pcmanfm/$name-$version.tar.gz"
+bdeps=('gtk2' 'menu-cache' 'shared-mime-info' 'udisks' 'desktop-file-utils')
+deps=('gtk2' 'menu-cache' 'shared-mime-info' 'udisks' 'desktop-file-utils')
+arch=('any')
+flags=()
+src=('http://downloads.sourceforge.net/pcmanfm/libfm-1.1.2.2.tar.gz')
 
 
 function configure() {

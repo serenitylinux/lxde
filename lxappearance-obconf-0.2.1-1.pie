@@ -3,10 +3,10 @@ name="lxappearance-obconf"
 iteration="1"
 version="0.2.1"
 desc="LXAppearance to configure openbox"
-bdeps="lxappearance openbox intltool"
-deps="lxappearance openbox"
-arch="any"
-flags=""
+bdeps=('lxappearance' 'openbox' 'intltool')
+deps=('lxappearance' 'openbox')
+arch=('any')
+flags=()
 ext="tar.gz"
 
 

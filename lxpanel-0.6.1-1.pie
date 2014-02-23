@@ -4,10 +4,10 @@ iteration="1"
 version="0.6.1"
 desc="Lightweight X11 desktop panel for LXDE"
 #alsa-lib libwnck
-bdeps="gtk2 libwnck menu-cache lxmenu-data"
-deps="gtk2 libwnck"
-arch="any"
-flags=""
+bdeps=('gtk2' 'libwnck' 'menu-cache' 'lxmenu-data')
+deps=('gtk2' 'libwnck')
+arch=('any')
+flags=()
 
 
 function configure() {

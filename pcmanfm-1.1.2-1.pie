@@ -3,12 +3,12 @@ name="pcmanfm"
 iteration="1"
 version="1.1.2"
 desc="A fast and lightweight file manager"
-bdeps="gtk2 desktop-file-utils libfm lxmenu-data"
-deps="intltool gtk2 libfm"
-arch="any"
-flags=""
+bdeps=('gtk2' 'desktop-file-utils' 'libfm' 'lxmenu-data')
+deps=('intltool' 'gtk2' 'libfm')
+arch=('any')
+flags=()
 url="http://pcmanfm.sourceforge.net"
-src="http://downloads.sourceforge.net/$name/$name-$version.tar.gz" 
+src=('http://downloads.sourceforge.net/pcmanfm/pcmanfm-1.1.2.tar.gz')
 
 
 function configure() {

@@ -5,8 +5,8 @@ version="0.5.5"
 desc="Feature-rich GTK+ theme switcher of the LXDE Desktop"
 bdeps="gtk2 intltool" #dbus-glib
 deps="gtk2"
-arch="any"
-flags=""
+arch=('any')
+flags=()
 ext="tar.xz"
 
 function configure() {

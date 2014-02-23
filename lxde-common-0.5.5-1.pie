@@ -3,10 +3,10 @@ name="lxde-common"
 iteration="1"
 version="0.5.5"
 desc="Common files of the LXDE Desktop"
-bdeps="gtk-engines lxde-icon-theme lxsession"
-deps="$bdeps"
-arch="any"
-flags=""
+bdeps=('gtk-engines' 'lxde-icon-theme' 'lxsession')
+deps=('gtk-engines' 'lxde-icon-theme' 'lxsession')
+arch=('any')
+flags=()
 
 
 function configure() {

@@ -3,10 +3,10 @@ name="lxmenu-data"
 iteration="1"
 version="0.1.2"
 desc="Desktop menus for LXDE"
-bdeps="intltool"
-deps=""
-arch="any"
-flags=""
+bdeps=('intltool')
+deps=()
+arch=('any')
+flags=()
 
 
 function configure() {

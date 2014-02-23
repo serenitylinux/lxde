@@ -3,12 +3,12 @@ name="openbox"
 iteration="1"
 version="3.5.2"
 desc="Lightweight window manager"
-bdeps="libxml2 libxinerama libxrandr libxcursor pango librsvg"
-deps="$bdeps"
-arch="any"
-flags=""
+bdeps=('libxml2' 'libxinerama' 'libxrandr' 'libxcursor' 'pango' 'librsvg')
+deps=('libxml2' 'libxinerama' 'libxrandr' 'libxcursor' 'pango' 'librsvg')
+arch=('any')
+flags=()
 url="http://openbox.org/"
-src="http://www.icculus.org/openbox/releases/$name-$version.tar.gz"
+src=('http://www.icculus.org/openbox/releases/openbox-3.5.2.tar.gz')
 
 
 function configure() {
